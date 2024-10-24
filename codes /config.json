@@ -1,0 +1,16 @@
+{
+    "connection": {
+        "connecting_string": "/dev/ttyACM0",
+        "baud_rate": 57600
+    },
+    "firebase": {
+        "apiKey": "Put your key here", 
+        "authDomain": "droneai-c394f.firebaseapp.com",
+        "databaseURL": "https://droneai-c394f-default-rtdb.asia-southeast1.firebasedatabase.app",
+        "projectId": "droneai-c394f",
+        "storageBucket": "droneai-c394f.appspot.com",
+        "messagingSenderId": "1043958961590",
+        "appId": "1:1043958961590:web:318bf9d30904beeee3dd17",
+        "measurementId": "G-JFZ5YSZSVE"
+    }
+}
