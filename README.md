@@ -78,7 +78,7 @@ https://github.com/user-attachments/assets/ffb7f6d2-7564-45cc-9413-335dbed1bee8
 
 This is a big win for us for the whole summer. Then, we validate our drone by bringing it into an innovation competition and won a Gold Medal. You can find the video of our presentation below:
 
-[![Demo Video](https://i.ytimg.com/an_webp/0ZWgyOTTF1M/mqdefault_6s.webp?du=3000&sqp=CMuj6rgG&rs=AOn4CLBX9lz_WXm-ejFd_2T9RwqOcMvjVg)]([https://www.youtube.com/watch?v=fFvJMiPVbjM](https://www.youtube.com/watch?v=0ZWgyOTTF1M&ab_channel=tune))
+  [![Demo Video](https://i.ytimg.com/an_webp/0ZWgyOTTF1M/mqdefault_6s.webp?du=3000&sqp=CMuj6rgG&rs=AOn4CLBX9lz_WXm-ejFd_2T9RwqOcMvjVg)](https://www.youtube.com/watch?v=0ZWgyOTTF1M&t)
 
 # Further development
 
