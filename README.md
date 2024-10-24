@@ -76,9 +76,15 @@ On the demo of Aug 2023, our prototype are capable of flying automatically fly f
 
 https://github.com/user-attachments/assets/ffb7f6d2-7564-45cc-9413-335dbed1bee8
 
-This is a big win for us for the whole summer. Then, we validate our drone by bringing it into an innovation competition and won a Gold Medal. You can find the video of our presentation below:
+This is a big win for us for the whole summer. Then, we validate our drone by bringing it into an innovation competition and won a Gold Medal. You can find the video of our presentation below by clicking into it:
 
-  [![Demo Video](https://i.ytimg.com/an_webp/0ZWgyOTTF1M/mqdefault_6s.webp?du=3000&sqp=CMuj6rgG&rs=AOn4CLBX9lz_WXm-ejFd_2T9RwqOcMvjVg)](https://www.youtube.com/watch?v=0ZWgyOTTF1M&t)
+<div align="center">
+
+[![Demo Video](https://i.ytimg.com/an_webp/0ZWgyOTTF1M/mqdefault_6s.webp?du=3000&sqp=CMuj6rgG&rs=AOn4CLBX9lz_WXm-ejFd_2T9RwqOcMvjVg)](https://www.youtube.com/watch?v=0ZWgyOTTF1M&t)
+
+*AI-JAM Presentation Video*
+</div>
+
 
 # Further development
 
