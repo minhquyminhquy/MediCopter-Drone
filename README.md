@@ -57,10 +57,23 @@ Our drone consists of hardwares components and Python script for the maneuver, a
 | **3D Printer**           | Used for creating custom parts and components for the drone, allowing for rapid prototyping and design iterations. Supports various materials to enhance structural integrity. |
 | **Electric Soldering Iron** | Essential for soldering electronic components onto the drone's circuit boards, ensuring reliable connections for optimal performance. Ideal for custom wiring and repairs. |
 
-
+# Workflow
+The workflow consists of 3 objects: Computer, Raspberry Pi, Pixhawk (Flight Controller)
+## Pre-flight
+1. **Connection**: The Raspberry Pi connects to the ThinkPad via Dynamic DNS and SSH. 
+2. **Command Execution**: Commands are sent from the computer to execute Python scripts on the Raspberry Pi. 
+3. **Preflight Setup**: Sensor calibration and battery checks are performed. 
+## Mid-air
+4. **Takeoff**: The Raspberry Pi commands the flight controller to spin the propellers. 
+5. **Flight**: The flight controller adjusts motor speeds based on sensor data for stability. 
+6. **Navigation**: The drone uses GPS for positioning and follows waypoints or manual inputs. 
+7. **Video Streaming**: Video streaming is initiated. 
+8. **Obstacle detection**: Detect obstacles (bird, building, 
+## Landing
+9. **Landing**: The flight controller commands the drone to gradually descend and land.
 # Results & Achievement
-
-On Aug 2023, our prototype are capable of flying automatically reach. We also successfully develop the add-on feature for communication between the human and human
+On the demo of Aug 2023, our prototype are capable of flying automatically fly from point A to point B, and land safely. During the flight, the drone capture 
+[![Demo Video](https://i9.ytimg.com/vi/fFvJMiPVbjM/mqdefault.jpg?sqp=CISw6rgG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGFggYChlMA8=&rs=AOn4CLBPaGJSHRe4bsU5XvQq5_5CQ-QDAg)](https://www.youtube.com/watch?v=fFvJMiPVbjM)
 
 # Further development
 
