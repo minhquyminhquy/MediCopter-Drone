@@ -16,6 +16,8 @@ Our drone consists of hardwares components and Python script for the maneuver, a
 * Automatically fly to the destination by using GPS and automatically update on the server
  * Using Object Detection to detect obstacles like bird, kites, building during maneuver
 
+![Poster - MediCopter](./media/[MediCopter] - Vietnam - Poster.jpg)
+
 # Materials
 
 ## Hardware component
@@ -71,6 +73,12 @@ The workflow consists of 3 objects: Computer, Raspberry Pi, Pixhawk (Flight Cont
 8. **Obstacle detection**: Detect obstacles (bird, building, etc)
 ## Landing
 9. **Landing**: The flight controller commands the drone to gradually descend and land.
+
+# Building Process
+## Building the frame
+1. 
+## Demo
+
 # Results & Achievement
 On the demo of Aug 2023, our prototype are capable of flying automatically fly from point A to point B, and land safely. 
 
