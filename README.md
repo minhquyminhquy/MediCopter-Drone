@@ -26,7 +26,7 @@ Our drone consists of hardwares components and Python script for the maneuver, a
 | **Multicopter Frame**  | Frame with Power Distribution Board        | Main structure for the drone       |
 |                        | 4 x 11x4.5 Propellers                       | Provides lift                       |
 |                        | 4 Arms                                     | Supports propellers                 |
-|                        | 5000mA LiPo Battery                         | Power source                       |
+|                        | 5000mAh LiPo Battery                         | Power source                       |
 |                        | 4 x 40A Electronic Speed Controllers (ESC) | Controls motor speed                |
 |                        | 980 kV Brushless Motor                      | Drives propellers                   |
 | **Flight Controller**  | Raspberry Pi 4                              | Onboard processing                  |
@@ -68,15 +68,18 @@ The workflow consists of 3 objects: Computer, Raspberry Pi, Pixhawk (Flight Cont
 5. **Flight**: The flight controller adjusts motor speeds based on sensor data for stability. 
 6. **Navigation**: The drone uses GPS for positioning and follows waypoints or manual inputs. 
 7. **Video Streaming**: Video streaming is initiated. 
-8. **Obstacle detection**: Detect obstacles (bird, building, 
+8. **Obstacle detection**: Detect obstacles (bird, building, etc)
 ## Landing
 9. **Landing**: The flight controller commands the drone to gradually descend and land.
 # Results & Achievement
-On the demo of Aug 2023, our prototype are capable of flying automatically fly from point A to point B, and land safely. During the flight, the drone capture 
-[![Demo Video](https://i9.ytimg.com/vi/fFvJMiPVbjM/mqdefault.jpg?sqp=CISw6rgG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGFggYChlMA8=&rs=AOn4CLBPaGJSHRe4bsU5XvQq5_5CQ-QDAg)](https://www.youtube.com/watch?v=fFvJMiPVbjM)
+On the demo of Aug 2023, our prototype are capable of flying automatically fly from point A to point B, and land safely. 
+
+https://github.com/user-attachments/assets/ffb7f6d2-7564-45cc-9413-335dbed1bee8
+
+This is a big win for us for the whole summer. Then, we validate our drone by bringing it into an innovation competition and won a Gold Medal. You can find the video of our presentation below:
+
+[![Demo Video](https://i.ytimg.com/an_webp/0ZWgyOTTF1M/mqdefault_6s.webp?du=3000&sqp=CMuj6rgG&rs=AOn4CLBX9lz_WXm-ejFd_2T9RwqOcMvjVg)]([https://www.youtube.com/watch?v=fFvJMiPVbjM](https://www.youtube.com/watch?v=0ZWgyOTTF1M&ab_channel=tune))
 
 # Further development
 
-Our drone is still limit
-
-There are two types of synchronization and they can complement each other:
+Although we have succesfully develop other add-on like object detection, our drone are not capable of dodging the obstacle in real-time. This is one of the main development that we can improve in the future. For further distance and more payload, we can upgrade our battery and motors.
