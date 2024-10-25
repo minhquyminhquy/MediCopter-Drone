@@ -96,14 +96,17 @@ Our journey have 2 phase: manual control (only Pixhawk) and autonomous control (
 <div align="center">
 <img src="media/assembling/Connect-ESC-to-PDB.png" alt="Poster - MediCopter" width="200"/>
 </div>
+
 2. Connect Brushless Motors to Arms
 <div align="center">
 <img src="media/assembling/Connect-motors-to-arms.png" alt="Example cdeo" width="200"/>
 </div>
+
 3. Connect Arms to PDB
 <div align="center">
 <img src="media/assembling/Connect-motors-to-arms.png" alt="Example cdeo" width="200"/>
 </div>
+
 4. Connect Battery to PDB
 <div align="center">
 <img src="media/assembling/Connect-Battery-PDB.png" alt="Example cdeo" width="200"/>
@@ -113,6 +116,7 @@ Our journey have 2 phase: manual control (only Pixhawk) and autonomous control (
 <div align="center">
 <img src="media/assembling/Connect-Pixhawk-PDB.png" alt="Example cdeo" width="200"/>
 </div>
+
 6. 3D printed the legs. The `.stl` file can be found in the folder `3D_components`.
 
 https://github.com/user-attachments/assets/169ed1b9-fe8f-40f5-9008-af87535a27e2
