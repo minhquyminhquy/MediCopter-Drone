@@ -94,7 +94,7 @@ Our journey have 2 phase: manual control (only Pixhawk) and autonomous control (
 ### Building the frame
 1. Connect Electronic Speed Controller (ESC) to Power Distribution Board (PDB)
 <div align="center">
-<img src="media/assembling/Connect-ESC-to-PDB.png" alt="Poster - MediCopter" width="200"/>
+<img src="media/assembling/Connect-ESC-to-PDB.png" alt="Poster - MediCopter" style="width: 200px; height: auto;"/>
 </div>
 
 2. Connect Brushless Motors to Arms
@@ -129,7 +129,7 @@ https://github.com/user-attachments/assets/169ed1b9-fe8f-40f5-9008-af87535a27e2
 8. Spinning test #1. At this point, 2 ESCs burns, so we have to upgrade ESCs.
 9. Connect new ESCs
 <div align="center">
-<img src="media/assembling/Connect-motors-to-arms.png" alt="Example cdeo" width="200"/>
+<img src="media/assembling/New-ESC.png" alt="Example cdeo" width="200"/>
 </div>
 8. Connect propellers
 
