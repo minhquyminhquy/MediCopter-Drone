@@ -1,22 +1,24 @@
 # MediCopter: DIY Automated Drone for Medical Supply Delivery!
 
-Welcome to our space! We are Quy, Vinh, and Khoa from Gia Dinh High School, Vietnam. Our project is MediCopter, an automated drone to deliver medical supply to rurals areas. In this github documentation, you can find our journey to build it from stratch, codes, and medias. You can also listen to our presentation at the end of this document.
+Welcome to our space! We are Quy, Vinh, and Khoa from Gia Dinh High School, Vietnam. Our project is MediCopter, an automated drone to deliver medical supply to rurals areas. In this github documentation, you can find our journey to build it from stratch, codes, and media. You can also listen to our presentation at the end of this document.
+
+<div align="center">
+<img src="media/medicopter_landscape.jpg" alt="Poster - MediCopter" width="600"/>
+</div>
+
 # Introduction
 Our drone primarily consist of multicopter frame, various sensors, and a power manangement system. In order to run automatically, there is an **Raspberry Pi 4** that run Python script to maneuver the drone to the desired duration, meanwhile sending GPS location back to the computer and detecting obstacles. To ensure smooth flight, there is a **Pixhawk 2.4.8** fly controller that control the balance of the flight using PID, which we had tune for better balance.
 ## Motivation:
-In the Mekong Delta, which is an rural area located in the southern Vietnam, there is **44%** of hospitals that are not equipped with sufficient medical supplies, leading to the emergence of ___ . In the emergency need of a certain medical supply, the traditional vehicles, like ambulance, are not capable of reaching these hospitals on-time, leading to bad situations.
+In the Mekong Delta, which is an rural area located in the southern Vietnam, there is **44%** of hospitals that are not equipped with sufficient medical supplies, leading to the emergence of on-demand medicals. In the emergency need of a certain medical supply, the traditional vehicles, like ambulance, are not capable of reaching these hospitals on-time, leading to bad situations.
 
-That is why we developed MediCopter, a solution that can significantly speed up the transportation times of medical supplies by using drones, one of the most modern means of transportation. With the capabilities of holding up to 2kg, and peak speed of 100 km/h [1], MediCopter can deliver most of the supplies needed for an emergency.
-
-Our drone consists of hardwares components and Python script for the maneuver, and also for the
-
+That is why we developed MediCopter, a solution that can significantly speed up the transportation times of medical supplies by using drones, one of the most modern means of transportation. With the capabilities of holding up to 2kg, and peak speed of 100 km/h, MediCopter can deliver most of the supplies needed for an emergency.
 ## Key features
 
 * Capable of holding maximum of 2kg by the 3D printed arm and servor
 * Automatically fly to the destination by using GPS and automatically update on the server
- * Using Object Detection to detect obstacles like bird, kites, building during maneuver
+* Using Object Detection to detect obstacles like bird, kites, building during maneuver
 
-![Poster - MediCopter](./media/[MediCopter] - Vietnam - Poster.jpg)
+![Poster - MediCopter](media/poster.jpg)
 
 # Materials
 
@@ -75,8 +77,16 @@ The workflow consists of 3 objects: Computer, Raspberry Pi, Pixhawk (Flight Cont
 9. **Landing**: The flight controller commands the drone to gradually descend and land.
 
 # Building Process
+You can find our assemling process in this youtube playlist: 
+
+[![My YouTube Playlist](https://i.ytimg.com/vi/Av5gm4qZClE/hqdefault.jpg?sqp=-oaymwExCNACELwBSFryq4qpAyMIARUAAIhCGAHwAQH4Ac4FgAKACooCDAgAEAEYciBZKD0wDw==&rs=AOn4CLAxeh6-WhTaF1w0ZvK9v_XqRcs9yA)]([https://www.youtube.com/playlist?list=PL1234567890](https://www.youtube.com/playlist?list=PL21Xkm88JcA4obuWS0P6m1VQUeOZoDrcb))
+
 ## Building the frame
-1. 
+1. Secure the Power Distribution board with frames and arms
+  <div align="center">
+<img src="media/medicopter_landscape.jpg" alt="Poster - MediCopter" width="600"/>
+</div>
+3. Connect ESCs
 ## Demo
 
 # Results & Achievement
