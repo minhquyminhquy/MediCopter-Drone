@@ -75,21 +75,63 @@ The workflow consists of 3 objects: Computer, Raspberry Pi, Pixhawk (Flight Cont
 8. **Obstacle detection**: Detect obstacles (bird, building, etc)
 ## Landing
 9. **Landing**: The flight controller commands the drone to gradually descend and land.
+    
+This workflow is mainly commanded by Raspberry Pi - Pixhawk Combination.
+<div align="center">
+<img src="media/Rasp-Pi-Combination.png" alt="Raspberry Pi - Pixhawk Combination" width="600"/>
+</div>
+Example code:
+<div align="center">
+<img src="media/example-code.png" alt="Example cdeo" width="600"/>
+</div>
 
 # Building Process
-You can find our assemling process in this youtube playlist: 
+Our journey have 2 phase: manual control (only Pixhawk) and autonomous control (Pixhawk and Raspberry Pi). You can find our assemling process in this youtube playlist.
 
-[![My YouTube Playlist](https://i.ytimg.com/vi/Av5gm4qZClE/hqdefault.jpg?sqp=-oaymwExCNACELwBSFryq4qpAyMIARUAAIhCGAHwAQH4Ac4FgAKACooCDAgAEAEYciBZKD0wDw==&rs=AOn4CLAxeh6-WhTaF1w0ZvK9v_XqRcs9yA)]([https://www.youtube.com/playlist?list=PL1234567890](https://www.youtube.com/playlist?list=PL21Xkm88JcA4obuWS0P6m1VQUeOZoDrcb))
+[![MediCopter Assembling Playlist](https://i.ytimg.com/vi/Av5gm4qZClE/hqdefault.jpg?sqp=-oaymwExCNACELwBSFryq4qpAyMIARUAAIhCGAHwAQH4Ac4FgAKACooCDAgAEAEYciBZKD0wDw==&rs=AOn4CLAxeh6-WhTaF1w0ZvK9v_XqRcs9yA)](https://youtube.com/playlist?list=PL21Xkm88JcA4obuWS0P6m1VQUeOZoDrcb&si=dXZTIC1rQ1kXRq51)
 
-## Building the frame
-1. Secure the Power Distribution board with frames and arms
-  <div align="center">
+## Phase 1: Manual control with Pixhawk
+### Building the frame
+1. Connect Electronic Speed Controller (ESC) to Power Distribution Board (PDB)
+<div align="center">
 <img src="media/medicopter_landscape.jpg" alt="Poster - MediCopter" width="600"/>
 </div>
-3. Connect ESCs
-## Demo
+2. Connect Brushless Motors to Arms
+3. Connect Arms to PDB
+4. 3D printed the legs. The `.stl` file can be found in the folder `3D_components`.
 
-# Results & Achievement
+https://github.com/user-attachments/assets/169ed1b9-fe8f-40f5-9008-af87535a27e2
+
+### Pixhawk Set-up
+5. Calibration and PID Tuning with Ardupilot
+6. Spinning test #1. At this point, 2 ESCs burns, so we have to upgrade ESCs.
+7. Connect new ESCs
+8. Connect propellers
+https://github.com/user-attachments/assets/d012decf-739c-4128-b322-1b5544648ba4
+9. Spinning test #2. This time it spins perfectly
+10. Field test #1 with controller.
+https://github.com/user-attachments/assets/e171f9fb-7b1c-440d-8f37-c7a3fa3b547b
+
+## Phase 2: Autonomous control
+### Raspberry Pi Set-up
+1. Connect Raspberry Pi
+https://github.com/user-attachments/assets/7c1b4f54-8426-4d72-b6c0-2fdf0d123a5a
+2. Connect Servo for Box Grabber. The 3D print file can be found at `3D_components/BoxGrabberPart1.stl` and `3D_components/BoxGrabberPart2.stl`
+https://github.com/user-attachments/assets/4f15eef7-565c-4d65-8523-65f59fb4e886
+3. Field test #2, automatic 
+4. Designing Medical Box
+https://github.com/user-attachments/assets/9040f761-5fff-42a1-a158-d3721a8c6d5b
+
+### Develop MobileNet-SDD model
+1. Get building, bird, kite images by web crawling
+2. Train the model
+https://github.com/user-attachments/assets/8a863976-2954-48e5-a756-10348f319502   
+3. Deploy on Raspberry Pi
+https://github.com/user-attachments/assets/92360678-1291-4f0b-8a1d-1a17bf62b5d6
+
+### Camera Module
+https://github.com/user-attachments/assets/2ed117ee-a2e5-4d44-a882-4a480ddee704
+# Results & Achievements
 On the demo of Aug 2023, our prototype are capable of flying automatically fly from point A to point B, and land safely. 
 
 https://github.com/user-attachments/assets/ffb7f6d2-7564-45cc-9413-335dbed1bee8
