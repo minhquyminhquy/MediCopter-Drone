@@ -8,6 +8,7 @@ from dronekit import connect, VehicleMode , LocationGlobal , LocationGlobalRelat
 import time  
 import dronekit_sitl  
 from pymavlink import mavutil 
+import threading
 import cv2
 
 # INITIALIZE VIDEO CAPTURE
@@ -94,7 +95,7 @@ def fly_to_mission_point(target_point, air_speed, ground_speed):
             frame = cv2.flip(frame, 0)
             output_file.write(frame)
         ##LAND
-        if is_at_target_location():
+        if is_at_target_location(target_pos=target_point):
             
             print("Reach target location")
             vehicle.mode = VehicleMode("LAND") 
@@ -145,7 +146,7 @@ def main():
             arm_and_takeoff(2)
 
         if HAS_FINISHED_ARMING_AND_TAKEOFF == True :
-            fly_to_mission_point(array_point, air_speed=0.5, ground_speed=0.5)
+            fly_to_mission_point(point2, air_speed=0.5, ground_speed=0.5)
 
         if HAS_LANDED:
             break

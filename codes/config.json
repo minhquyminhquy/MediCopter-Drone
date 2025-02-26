@@ -4,7 +4,7 @@
         "baud_rate": 57600
     },
     "firebase": {
-        "apiKey": "Put your key here", 
+        "apiKey": "my-api-key", 
         "authDomain": "droneai-c394f.firebaseapp.com",
         "databaseURL": "https://droneai-c394f-default-rtdb.asia-southeast1.firebasedatabase.app",
         "projectId": "droneai-c394f",

@@ -1,8 +1,17 @@
+"""
+This script instructs the drone to take off, fly to target position, and land. 
+Meanwhile recording the journey with the camera infront and update its location on Firebase.
+
+Demo day: 20 Aug 2023
+"""
+
+import threading
 import json
 from dronekit import connect, VehicleMode, LocationGlobalRelative
-import time  
+import time
 import cv2 
 import pyrebase
+import threading # Used for recording video simultaneously
 from geopy.distance import geodesic 
 import random  # Used for simulating obstacle detection
 
@@ -14,13 +23,18 @@ with open('config.json') as config_file:
 CONNECTING_STRING = config['connection']['connecting_string']
 BAUD_RATE = config['connection']['baud_rate']
 
-# Firebase Configuration
+# Firebase Configuration and Initialization
 FIREBASE_CONFIG = config['firebase']
+firebase = pyrebase.initialize_app(FIREBASE_CONFIG)
+db = firebase.database()
 
 # Initialize Vehicle
 vehicle = connect(CONNECTING_STRING, BAUD_RATE, wait_ready=True)  
-firebase = pyrebase.initialize_app(FIREBASE_CONFIG)
-db = firebase.database()
+
+# Initialize video capture and video writer
+video_capture = cv2.VideoCapture(0)
+fourcc = cv2.VideoWriter_fourcc(*'XVID')
+output_file = cv2.VideoWriter('output2.avi', fourcc, 20.0, (640, 480))
 
 def update_firebase_location():
     """Update the drone's current latitude and longitude to Firebase."""
@@ -29,12 +43,14 @@ def update_firebase_location():
     data = {"LAT": lat, "LNG": lon}
     db.update(data)
 
-def capture_camera_frame(video_capture, output_file): 
+def record_video():
     """Capture a frame from the camera and write it to the output file."""
-    ret, frame = video_capture.read()
-    if ret:
-        frame = cv2.flip(frame, 0)
-        output_file.write(frame)
+    while True:
+        ret, frame = video_capture.read()
+        if ret:
+            frame = cv2.flip(frame, 0)
+            output_file.write(frame)
+        time.sleep(0.1) 
 
 def arm_and_takeoff(target_altitude):
     """Arm the drone and take off to the specified altitude."""
@@ -54,17 +70,16 @@ def arm_and_takeoff(target_altitude):
     vehicle.simple_takeoff(target_altitude)  
 
     while True:
-        print("Altitude: ", vehicle.location.global_relative_frame.alt)
+        print(f"Altitude: {vehicle.location.global_relative_frame.alt}")
         update_firebase_location()
         if vehicle.location.global_relative_frame.alt >= target_altitude * 0.95:
             print("Reached target altitude")
             break
 
-def fly_to_target(latitude, longitude):         
+def fly_to_target(latitude, longitude, target_alt, air_speed):         
     """Fly the drone to the specified latitude and longitude."""
-    vehicle.airspeed = 10  # Set the speed during the flight
-    altitude = 30  # Set the desired altitude during the flight
-    target_point = LocationGlobalRelative(latitude, longitude, altitude) 
+    vehicle.airspeed = air_speed  
+    target_point = LocationGlobalRelative(latitude, longitude, target_alt) 
     vehicle.simple_goto(target_point) 
 
     while True:
@@ -77,13 +92,13 @@ def fly_to_target(latitude, longitude):
         # Calculate the remaining distance to the target point
         remaining_distance = geodesic(current_point, target_point).meters
 
-        update_firebase_location()  # Update Firebase with current location
+        update_firebase_location()  
 
         if remaining_distance < 0.25:
             print("Drone reached target location")
             break
 
-        time.sleep(1)  # Sleep to prevent rapid looping
+        time.sleep(1)  
 
 def land(): 
     """Land the drone safely."""
@@ -143,24 +158,33 @@ def create_waypoints():
         (10.80500, 106.71850)
     ]
 
-def execute_mission(waypoints):
+def execute_mission(waypoints, target_alt, air_speed):
     """Execute the flight mission based on provided waypoints."""
     for waypoint in waypoints:
         latitude, longitude = waypoint
-        fly_to_target(latitude, longitude)
+        fly_to_target(latitude, longitude, target_alt, air_speed)
         monitor_battery()
         check_for_obstacles()
 
-if __name__ == "__main__":
-    video_capture = cv2.VideoCapture(0)  # Initialize camera capture
-    output_file = cv2.VideoWriter('output.avi', cv2.VideoWriter_fourcc(*'XVID'), 20.0, (640, 480))
+def main():
+    video_thread = threading.Thread(target=record_video)
+    video_thread.daemon = True  
+    video_thread.start()
 
     target_altitude = 6
+    air_speed = 1
     print_drone_parameters() 
     arm_and_takeoff(target_altitude)
 
     waypoints = create_waypoints()
-    execute_mission(waypoints)
+    execute_mission(waypoints, target_alt=target_altitude, 
+                    air_speed=air_speed)
 
     land()
-    output_file.release()  # Release video output file
+    
+    video_capture.release()
+    output_file.release()
+
+if __name__ == "__main__":
+    main()
+
