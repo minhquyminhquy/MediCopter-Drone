@@ -177,13 +177,19 @@ On the demo of Aug 2023, our prototype are capable of flying automatically fly f
 
 https://github.com/user-attachments/assets/ffb7f6d2-7564-45cc-9413-335dbed1bee8
 
-This is a big win for us for the whole summer. Then, we validate our drone by bringing it into an innovation competition and won a Gold Medal. You can find the video of our presentation below by clicking into it:
+This is a big win for us for the whole summer. Then, we validate our drone by bringing it into a science and engineering competition and won a Gold Medal. You can find the video of our presentation below by clicking into it:
 
 <div align="center">
 
 [![Presentation Video](https://i.ytimg.com/an_webp/0ZWgyOTTF1M/mqdefault_6s.webp?du=3000&sqp=CNzB7bgG&rs=AOn4CLCIIOn5TGN3Dyl9DKaGGOHWB-XjKw)](https://www.youtube.com/watch?v=0ZWgyOTTF1M&t)
 
 *AI-JAM Presentation Video*
+</div>
+
+We also got our hands on entrepreneurship by bringing this into a startup competition for high schoolers and university student. During the process, I learn the fundamentals of building a startup by crafting our business model canvas (checkout the ```final_round_pitching``` folder) and improve my public speaking skills by pitching it multiple times through different elimination round. Finally, we won a consolidation prize (around 200$) out of hundreds of teams. Such an amazing journey.
+
+<div align="center">
+<img src="media/final_presentation_result.jpg" alt="Final Round" style="width: 150px; height: auto;"/>
 </div>
 
 
