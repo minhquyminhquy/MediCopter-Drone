@@ -189,7 +189,7 @@ This is a big win for us for the whole summer. Then, we validate our drone by br
 We also got our hands on entrepreneurship by bringing this into a startup competition for high schoolers and university student. During the process, I learn the fundamentals of building a startup by crafting our business model canvas (checkout the ```final_round_pitching``` folder) and improve my public speaking skills by pitching it multiple times through different elimination round. Finally, we won a consolidation prize (around 200$) out of hundreds of teams. Such an amazing journey.
 
 <div align="center">
-<img src="media/final_presentation_result.jpg" alt="Final Round" style="width: 150px; height: auto;"/>
+<img src="media/final_presentation_result.jpg" alt="Final Round" style="width: 300px; height: auto;"/>
 </div>
 
 
