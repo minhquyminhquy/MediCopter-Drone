@@ -50,7 +50,7 @@ def wait_for_takeoff(target_altitude):
         if altitude >= target_altitude:
             print("Target altitude reached")
             break
-        time.sleep(1)
+        time.sleep(1)   
 
 def fly_to_target(target_latitude, target_longitude):
     """Sends the drone to a target position"""
@@ -61,6 +61,10 @@ def fly_to_target(target_latitude, target_longitude):
         dialect.MAV_CMD_NAV_WAYPOINT, 0, 1, 0,
         0, 0, 0, 0, target_latitude, target_longitude, 0
     )
+
+    msg = master.recv_match(type='GLOBAL_POSITION_INT', blocking=True)
+    print(f"Latitude: {msg.lat}, Longitude: {msg.lon}, Altitude: {msg.relative_alt / 1000.0}m")
+
     print(f"Flying to target location: {target_latitude}, {target_longitude}")
 
 def is_at_target_location(target_latitude, target_longitude):
